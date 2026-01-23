@@ -7,11 +7,11 @@ namespace JournalApp;
 public class Journal
 {
     private List<Entry>_entries=new List<Entry>();
-    public void addEntry(Entry entry)
+    public void AddEntry(Entry entry)
     {
         _entries.Add(entry);
     }
-    public void displayAll()
+    public void DisplayAll()
     {
         foreach(Entry entry in _entries)
         {
@@ -19,13 +19,13 @@ public class Journal
             entry.Display();
         }
     }
-    public void Savetofile(string filename)
+    public void SaveToFile(string filename)
     {
         using (StreamWriter writer = new StreamWriter(filename))
         {
             foreach (Entry entry in _entries)
             {
-                writer.WriteLine($"Date{entry._date}|{entry._prompt}|{entry._response}")
+                writer.WriteLine($"Date{entry._date}|{entry._prompt}|{entry._response}");
             }
         }
        
