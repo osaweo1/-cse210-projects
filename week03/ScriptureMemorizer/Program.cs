@@ -4,11 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
+        // calling the reference class
          Reference reference = new Reference("Proverbs", 3, 5, 6);
 
         string text = "Trust in the Lord with all thine heart and lean not unto thine own understanding. " +
                       "In all thy ways acknowledge him and he shall direct thy paths.";
 
+        // calling the scripture
         Scripture scripture = new Scripture(reference, text);
 
         while (true)
@@ -62,6 +64,8 @@ class Reference
         _endVerse = endVerse;
     }
 
+
+    //  for display of scripture to accormordate scripture with longer verses
     public string GetDisplayText()
     {
         if (_startVerse == _endVerse)
